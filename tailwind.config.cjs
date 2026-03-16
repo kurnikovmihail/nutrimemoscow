@@ -4,14 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2E7D32',
-        secondary: '#66BB6A',
+        primary: '#D96C4A',
+        secondary: '#6F8A63',
         brand: {
-          dark: '#121212',
-          surface: '#1E1E1E',
-          text: '#F5F5F5',
-          muted: '#B0B0B0',
-          accent: '#FFB74D',
+          dark: '#F6F4EF',
+          section: '#ECE7DE',
+          surface: '#FFFFFF',
+          text: '#1E1E1E',
+          muted: '#6B6B6B',
+          line: '#E4DFD6',
+          input: '#DAD4C8',
+          placeholder: '#9A9A9A',
         },
       },
       fontFamily: {
@@ -19,7 +22,7 @@ module.exports = {
         display: ['Cormorant Garamond', 'serif'],
       },
       boxShadow: {
-        soft: '0 20px 44px -24px rgba(0, 0, 0, 0.65)',
+        soft: '0 16px 36px -24px rgba(51, 45, 39, 0.28)',
       },
       keyframes: {
         float: {
