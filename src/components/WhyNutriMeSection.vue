@@ -102,7 +102,7 @@ onBeforeUnmount(() => {
           v-for="(item, index) in whyNutrimeBenefits"
           :key="item.title"
           :ref="(element) => setWhyCardRef(element, index)"
-          class="group rounded-[16px] border border-[#E6E1D8] bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-7"
+          class="group rounded-[16px] border border-brand-line bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-7"
           :class="visibleWhyCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
           :style="{ transitionDelay: `${index * 80}ms` }"
         >
@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
         </p>
         <button
           type="button"
-          class="mt-6 w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35] md:w-auto"
+          class="mt-6 w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-primary-hover active:bg-secondary md:w-auto"
           @click="openQuiz"
         >
           Получить персональный расчёт

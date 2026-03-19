@@ -113,7 +113,7 @@ onBeforeUnmount(() => {
   <section id="personalization" class="bg-brand-section px-4 py-[90px] sm:px-6 md:py-[140px]">
     <div class="mx-auto grid w-full max-w-[1200px] gap-10 md:grid-cols-2 md:items-center md:gap-20">
       <article class="relative mx-auto w-full max-w-[520px]">
-        <div class="overflow-hidden rounded-[14px] border border-[#E6E1D8] bg-white p-2 md:rounded-[18px]">
+        <div class="overflow-hidden rounded-[14px] border border-brand-line bg-white p-2 md:rounded-[18px]">
           <div class="relative aspect-[5/6] overflow-hidden rounded-xl md:aspect-[10/11]">
             <video
               ref="personalizationVisualVideo"
@@ -132,7 +132,7 @@ onBeforeUnmount(() => {
         <article
           v-for="card in personalizationDataCards"
           :key="card.label"
-          class="animate-float absolute w-[132px] rounded-xl border border-[#E6E1D8] bg-white p-3 shadow-soft md:w-40 md:p-3.5"
+          class="animate-float absolute w-[132px] rounded-xl border border-brand-line bg-white p-3 shadow-soft md:w-40 md:p-3.5"
           :class="card.positionClass"
           :style="{ animationDelay: card.delay }"
         >
@@ -189,7 +189,7 @@ onBeforeUnmount(() => {
 
         <button
           type="button"
-          class="mt-10 w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-[#C25E40] active:bg-[#A94F35] md:w-auto"
+          class="mt-10 w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-primary-hover active:bg-secondary md:w-auto"
           @click="openQuiz"
         >
           Получить персональный расчёт

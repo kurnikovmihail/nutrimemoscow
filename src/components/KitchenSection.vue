@@ -99,7 +99,7 @@ onBeforeUnmount(() => {
       <article class="mx-auto mt-10 w-full max-w-[1000px] md:mt-14">
         <button
           type="button"
-          class="group relative block w-full overflow-hidden rounded-[14px] border border-[#E6E1D8] bg-white p-2 text-left md:rounded-[18px]"
+          class="group relative block w-full overflow-hidden rounded-[14px] border border-brand-line bg-white p-2 text-left md:rounded-[18px]"
           @click="openKitchenModal"
         >
           <div class="relative aspect-video overflow-hidden rounded-[12px] md:rounded-[14px]">
@@ -117,7 +117,7 @@ onBeforeUnmount(() => {
           </div>
 
           <span
-            class="absolute bottom-6 left-6 inline-flex rounded-[10px] border border-[#E6E1D8] bg-white/90 px-4 py-2.5 text-sm font-semibold text-brand-text transition group-hover:bg-white"
+            class="absolute bottom-6 left-6 inline-flex rounded-[10px] border border-brand-line bg-white/90 px-4 py-2.5 text-sm font-semibold text-brand-text transition group-hover:bg-white"
           >
             Смотреть кухню
           </span>
@@ -129,7 +129,7 @@ onBeforeUnmount(() => {
           v-for="(item, index) in kitchenFeatures"
           :key="item.title"
           :ref="(element) => setKitchenCardRef(element, index)"
-          class="group rounded-[14px] border border-[#E6E1D8] bg-white p-[22px] transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-7"
+          class="group rounded-[14px] border border-brand-line bg-white p-[22px] transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-7"
           :class="visibleKitchenCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0'"
           :style="{ transitionDelay: `${index * 100}ms` }"
         >
@@ -164,7 +164,7 @@ onBeforeUnmount(() => {
       class="fixed inset-0 z-40 flex items-center justify-center bg-black/55 p-4"
       @click.self="closeKitchenModal"
     >
-      <div class="w-full max-w-[1080px] rounded-2xl border border-[#E6E1D8] bg-white p-3 shadow-soft sm:p-4">
+      <div class="w-full max-w-[1080px] rounded-2xl border border-brand-line bg-white p-3 shadow-soft sm:p-4">
         <div class="mb-3 flex items-center justify-between">
           <p class="text-sm font-semibold uppercase tracking-[0.14em] text-secondary">Живая кухня NutriMe</p>
           <button

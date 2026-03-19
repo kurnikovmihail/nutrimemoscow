@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+import logoSrc from '../../82186955.svg'
 
 const props = defineProps({
   videoSrc: {
@@ -63,7 +64,7 @@ onMounted(() => {
         playsinline
         preload="metadata"
       ></video>
-      <div class="absolute inset-0 bg-[rgba(246,244,239,0.78)]"></div>
+      <div class="absolute inset-0 bg-[rgba(244,250,249,0.78)]"></div>
     </div>
 
     <div class="relative md:hidden">
@@ -78,15 +79,15 @@ onMounted(() => {
           playsinline
           preload="metadata"
         ></video>
-        <div class="absolute inset-0 bg-[rgba(246,244,239,0.78)]"></div>
+        <div class="absolute inset-0 bg-[rgba(244,250,249,0.78)]"></div>
       </div>
     </div>
 
     <div class="relative z-20">
-      <header class="sticky top-0 z-30 h-20 border-b border-brand-line bg-[rgba(246,244,239,0.8)] backdrop-blur">
+      <header class="sticky top-0 z-30 h-20 border-b border-brand-line bg-[rgba(244,250,249,0.82)] backdrop-blur">
         <div class="section-shell flex h-full items-center justify-between px-4 sm:px-6">
-          <a href="#" class="text-xl font-extrabold tracking-tight text-brand-text">
-            NutriMe
+          <a href="#" class="inline-flex items-center" aria-label="NutriMe">
+            <img :src="logoSrc" alt="NutriMe logo" class="h-[60px] w-auto md:h-[66px]" />
           </a>
 
           <nav class="hidden items-center gap-7 text-sm font-medium md:flex">
@@ -102,7 +103,7 @@ onMounted(() => {
 
           <button
             type="button"
-            class="hidden rounded-[10px] bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.03] hover:bg-[#C25E40] active:bg-[#A94F35] md:inline-flex"
+            class="hidden rounded-[10px] bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.03] hover:bg-primary-hover active:bg-secondary md:inline-flex"
             @click="openQuiz"
           >
             Рассчитать питание
@@ -141,7 +142,7 @@ onMounted(() => {
           </nav>
           <button
             type="button"
-            class="mt-3 w-full rounded-[10px] bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.03] hover:bg-[#C25E40] active:bg-[#A94F35]"
+            class="mt-3 w-full rounded-[10px] bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:scale-[1.03] hover:bg-primary-hover active:bg-secondary"
             @click="openQuiz"
           >
             Рассчитать питание
@@ -169,7 +170,7 @@ onMounted(() => {
           <div class="hero-reveal mt-7 flex flex-col gap-3 sm:flex-row sm:items-center" style="--delay: 540ms">
             <button
               type="button"
-              class="w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-[#C25E40] active:bg-[#A94F35] sm:w-auto"
+              class="w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-primary-hover active:bg-secondary sm:w-auto"
               @click="openQuiz"
             >
               Получить персональный расчет

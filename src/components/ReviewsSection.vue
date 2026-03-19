@@ -158,7 +158,7 @@ onBeforeUnmount(() => {
           v-for="(review, index) in videoTestimonials"
           :key="`video-review-${review.name}`"
           :ref="(element) => setVideoReviewCardRef(element, index)"
-          class="group min-w-[82%] overflow-hidden rounded-[16px] border border-[#E6E1D8] bg-white transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft sm:min-w-[64%] md:min-w-0"
+          class="group min-w-[82%] overflow-hidden rounded-[16px] border border-brand-line bg-white transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft sm:min-w-[64%] md:min-w-0"
           :class="visibleVideoReviewCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0'"
           :style="{ transitionDelay: `${index * 90}ms` }"
         >
@@ -174,7 +174,7 @@ onBeforeUnmount(() => {
               ></video>
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/15 to-transparent"></div>
               <span
-                class="video-review-play-pulse absolute left-1/2 top-1/2 inline-flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[rgba(217,108,74,0.9)] text-white transition duration-300 group-hover:scale-105"
+                class="video-review-play-pulse absolute left-1/2 top-1/2 inline-flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[rgba(20,125,108,0.9)] text-white transition duration-300 group-hover:scale-105"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" class="ml-0.5 h-5 w-5" aria-hidden="true">
                   <path d="m9 7 8 5-8 5V7Z" />
@@ -195,7 +195,7 @@ onBeforeUnmount(() => {
           v-for="(review, index) in textReviews"
           :key="`text-review-${review.name}`"
           :ref="(element) => setTextReviewCardRef(element, index)"
-          class="rounded-[16px] border border-[#E6E1D8] bg-white p-[22px] transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-[26px]"
+          class="rounded-[16px] border border-brand-line bg-white p-[22px] transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-[26px]"
           :class="visibleTextReviewCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0'"
           :style="{ transitionDelay: `${index * 90}ms` }"
         >
@@ -209,7 +209,7 @@ onBeforeUnmount(() => {
             <p class="text-base font-semibold text-brand-text">{{ review.name }}</p>
           </div>
           <p class="mt-2.5 text-[15px] leading-relaxed text-brand-muted">{{ review.text }}</p>
-          <div class="mt-4 flex items-center gap-1 text-primary">
+          <div class="mt-4 flex items-center gap-1 text-gold">
             <svg
               v-for="starIndex in 5"
               :key="`star-${review.name}-${starIndex}`"
@@ -233,7 +233,7 @@ onBeforeUnmount(() => {
       class="fixed inset-0 z-[46] flex items-center justify-center bg-black/55 p-4"
       @click.self="closeReviewVideo"
     >
-      <div class="w-full max-w-3xl rounded-2xl border border-[#E6E1D8] bg-white p-3 shadow-soft sm:p-4">
+      <div class="w-full max-w-3xl rounded-2xl border border-brand-line bg-white p-3 shadow-soft sm:p-4">
         <div class="mb-3 flex items-center justify-between">
           <div>
             <p class="text-sm font-semibold uppercase tracking-[0.14em] text-secondary">

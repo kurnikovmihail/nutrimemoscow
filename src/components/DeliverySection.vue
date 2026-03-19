@@ -111,12 +111,12 @@ onBeforeUnmount(() => {
       </header>
 
       <div class="mt-12 md:mt-[60px]">
-        <article class="delivery-map-drift relative h-[320px] overflow-hidden rounded-[14px] border border-[#E6E1D8] bg-white md:h-[420px] md:rounded-[18px]">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(111,138,99,0.12),transparent_38%),radial-gradient(circle_at_82%_78%,rgba(217,108,74,0.16),transparent_46%),linear-gradient(160deg,#F4EFE5_0%,#F1EBDD_100%)]"></div>
-          <div class="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(214,206,191,0.45)_1px,transparent_1px),linear-gradient(90deg,rgba(214,206,191,0.45)_1px,transparent_1px)] [background-size:52px_52px]"></div>
+        <article class="delivery-map-drift relative h-[320px] overflow-hidden rounded-[14px] border border-brand-line bg-white md:h-[420px] md:rounded-[18px]">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(20,125,108,0.14),transparent_38%),radial-gradient(circle_at_82%_78%,rgba(0,174,239,0.16),transparent_46%),linear-gradient(160deg,#F2FAF9_0%,#EAF4F2_100%)]"></div>
+          <div class="absolute inset-0 opacity-45 [background-image:linear-gradient(rgba(181,206,201,0.45)_1px,transparent_1px),linear-gradient(90deg,rgba(181,206,201,0.45)_1px,transparent_1px)] [background-size:52px_52px]"></div>
 
-          <div class="absolute left-[18%] top-[18%] h-[50%] w-[44%] rounded-[46%] bg-[rgba(217,108,74,0.18)]"></div>
-          <div class="absolute left-[51%] top-[38%] h-[36%] w-[33%] rounded-[44%] bg-[rgba(111,138,99,0.15)]"></div>
+          <div class="absolute left-[18%] top-[18%] h-[50%] w-[44%] rounded-[46%] bg-[rgba(20,125,108,0.18)]"></div>
+          <div class="absolute left-[51%] top-[38%] h-[36%] w-[33%] rounded-[44%] bg-[rgba(45,56,138,0.15)]"></div>
 
           <p class="absolute left-4 top-4 rounded-lg bg-white/90 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.09em] text-brand-text md:left-6 md:top-6">
             Москва и ближайшие районы
@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
             :class="marker.positionClass"
           >
             <span class="delivery-marker-pulse absolute left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/35"></span>
-            <span class="relative inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#E6E1D8] bg-white text-primary shadow-soft">
+            <span class="relative inline-flex h-8 w-8 items-center justify-center rounded-full border border-brand-line bg-white text-primary shadow-soft">
               <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M1 3h11v13H1z" />
                 <path d="M12 8h5l4 4v4h-9z" />
@@ -150,7 +150,7 @@ onBeforeUnmount(() => {
           </div>
         </article>
 
-        <div class="mt-5 rounded-[14px] border border-[#E6E1D8] bg-white p-4 md:mt-6 md:rounded-[16px] md:p-5">
+        <div class="mt-5 rounded-[14px] border border-brand-line bg-white p-4 md:mt-6 md:rounded-[16px] md:p-5">
           <label for="delivery-address" class="block text-sm font-semibold text-brand-text">
             Проверка адреса доставки
           </label>
@@ -178,7 +178,7 @@ onBeforeUnmount(() => {
           v-for="(item, index) in deliveryCards"
           :key="item.title"
           :ref="(element) => setDeliveryCardRef(element, index)"
-          class="group rounded-[16px] border border-[#E6E1D8] bg-white p-[22px] transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-[26px]"
+          class="group rounded-[16px] border border-brand-line bg-white p-[22px] transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-[26px]"
           :class="visibleDeliveryCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0'"
           :style="{ transitionDelay: `${index * 90}ms` }"
         >

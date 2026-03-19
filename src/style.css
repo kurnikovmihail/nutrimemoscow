@@ -11,8 +11,9 @@
 body {
   @apply bg-brand-dark font-sans text-brand-text antialiased;
   background-image:
-    radial-gradient(circle at 10% 0%, rgba(111, 138, 99, 0.14), transparent 35%),
-    linear-gradient(180deg, #f6f4ef 0%, #f6f4ef 100%);
+    radial-gradient(circle at 10% 0%, rgba(20, 125, 108, 0.16), transparent 35%),
+    radial-gradient(circle at 88% 10%, rgba(0, 174, 239, 0.12), transparent 36%),
+    linear-gradient(180deg, #f4faf9 0%, #f4faf9 100%);
 }
 
 .section-shell {
@@ -73,7 +74,7 @@ body {
   height: 18px;
   border-radius: 999px;
   border: 2px solid #ffffff;
-  background: #d96c4a;
+  background: #147d6c;
 }
 
 .comparison-slider::-moz-range-thumb {
@@ -81,7 +82,7 @@ body {
   height: 18px;
   border-radius: 999px;
   border: 2px solid #ffffff;
-  background: #d96c4a;
+  background: #147d6c;
 }
 
 .hero-reveal {
@@ -196,10 +197,10 @@ body {
 @keyframes videoReviewPlayPulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(217, 108, 74, 0.38);
+    box-shadow: 0 0 0 0 rgba(20, 125, 108, 0.38);
   }
   70% {
-    box-shadow: 0 0 0 14px rgba(217, 108, 74, 0);
+    box-shadow: 0 0 0 14px rgba(20, 125, 108, 0);
   }
 }
 

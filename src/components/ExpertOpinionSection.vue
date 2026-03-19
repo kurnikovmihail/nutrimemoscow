@@ -49,7 +49,7 @@ const closeExpertVideo = () => {
           class="group block w-full text-left"
           @click="openExpertVideo"
         >
-          <div class="overflow-hidden rounded-[16px] border border-[#E6E1D8] bg-white p-2 md:rounded-[18px]">
+          <div class="overflow-hidden rounded-[16px] border border-brand-line bg-white p-2 md:rounded-[18px]">
             <img
               :src="expertInfo.photo"
               :alt="`Нутрициолог ${expertInfo.name}`"
@@ -57,12 +57,12 @@ const closeExpertVideo = () => {
               loading="lazy"
             />
           </div>
-          <span class="mt-3 inline-flex rounded-[10px] border border-[#E6E1D8] bg-white/90 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-brand-text md:hidden">
+          <span class="mt-3 inline-flex rounded-[10px] border border-brand-line bg-white/90 px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-brand-text md:hidden">
             Смотреть комментарий
           </span>
         </button>
 
-        <article class="animate-float absolute -bottom-5 left-4 w-[170px] rounded-xl border border-[#E6E1D8] bg-white p-3.5 shadow-soft md:left-6 md:w-[190px]">
+        <article class="animate-float absolute -bottom-5 left-4 w-[170px] rounded-xl border border-brand-line bg-white p-3.5 shadow-soft md:left-6 md:w-[190px]">
           <p class="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-muted">Эксперт</p>
           <p class="mt-1 text-sm font-semibold text-brand-text">Сертифицированный нутрициолог</p>
           <p class="mt-1 text-xs text-brand-muted">7 лет практики</p>
@@ -99,7 +99,7 @@ const closeExpertVideo = () => {
 
         <button
           type="button"
-          class="mt-10 w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35] md:w-auto"
+          class="mt-10 w-full rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-primary-hover active:bg-secondary md:w-auto"
           @click="openQuiz"
         >
           Получить персональный расчёт
@@ -114,7 +114,7 @@ const closeExpertVideo = () => {
       class="fixed inset-0 z-[44] flex items-center justify-center bg-black/55 p-4"
       @click.self="closeExpertVideo"
     >
-      <div class="w-full max-w-3xl rounded-2xl border border-[#E6E1D8] bg-white p-3 shadow-soft sm:p-4">
+      <div class="w-full max-w-3xl rounded-2xl border border-brand-line bg-white p-3 shadow-soft sm:p-4">
         <div class="mb-3 flex items-center justify-between">
           <p class="text-sm font-semibold uppercase tracking-[0.14em] text-secondary">
             Комментарий нутрициолога

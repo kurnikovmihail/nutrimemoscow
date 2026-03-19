@@ -104,7 +104,7 @@ onBeforeUnmount(() => {
           v-for="(item, index) in resultCards"
           :key="item.name"
           :ref="(element) => setResultCardRef(element, index)"
-          class="group overflow-hidden rounded-[16px] border border-[#E6E1D8] bg-white transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft"
+          class="group overflow-hidden rounded-[16px] border border-brand-line bg-white transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft"
           :class="visibleResultCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
           :style="{ transitionDelay: `${index * 90}ms` }"
         >
@@ -155,7 +155,7 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="mt-16 grid gap-8 md:mt-20 md:grid-cols-[0.95fr_1.05fr] md:items-center">
-        <figure class="mx-auto w-full max-w-[420px] overflow-hidden rounded-[14px] border border-[#E6E1D8] md:rounded-[16px]">
+        <figure class="mx-auto w-full max-w-[420px] overflow-hidden rounded-[14px] border border-brand-line md:rounded-[16px]">
           <img
             :src="resultStory.image"
             alt="История клиента NutriMe"
@@ -173,7 +173,7 @@ onBeforeUnmount(() => {
           </p>
           <button
             type="button"
-            class="mt-7 rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35]"
+            class="mt-7 rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-primary-hover active:bg-secondary"
             @click="openQuiz"
           >
             Получить персональный расчет

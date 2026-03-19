@@ -92,7 +92,7 @@ onBeforeUnmount(() => {
         <template v-for="(card, index) in problemCards" :key="card.title">
           <article
             :ref="(element) => setProblemCardRef(element, index)"
-            class="group rounded-[14px] border border-[#E6E1D8] bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-8"
+            class="group rounded-[14px] border border-brand-line bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-8"
             :class="visibleProblemCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'"
             :style="{ transitionDelay: `${index * 100}ms` }"
           >
@@ -106,7 +106,7 @@ onBeforeUnmount(() => {
                 playsinline
                 preload="metadata"
               ></video>
-              <div class="absolute inset-0 bg-[rgba(246,244,239,0.48)]"></div>
+              <div class="absolute inset-0 bg-[rgba(244,250,249,0.5)]"></div>
             </div>
 
             <span class="inline-flex h-10 w-10 items-center justify-center text-primary transition-colors duration-300 group-hover:text-secondary">
@@ -142,7 +142,7 @@ onBeforeUnmount(() => {
         </p>
         <a
           href="#how-it-works"
-          class="mt-7 inline-flex rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-[#C25E40] active:bg-[#A94F35]"
+          class="mt-7 inline-flex rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-primary-hover active:bg-secondary"
         >
           Посмотреть как это работает
         </a>

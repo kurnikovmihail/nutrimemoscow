@@ -142,9 +142,9 @@ onBeforeUnmount(() => {
       </header>
 
       <div class="relative mt-12 md:mt-[70px]">
-        <div class="absolute bottom-0 left-[17px] top-0 w-[2px] bg-[#E6E1D8] md:hidden"></div>
+        <div class="absolute bottom-0 left-[17px] top-0 w-[2px] bg-brand-line md:hidden"></div>
 
-        <div class="absolute left-0 right-0 top-[18px] hidden h-[2px] bg-[#E6E1D8] md:block"></div>
+        <div class="absolute left-0 right-0 top-[18px] hidden h-[2px] bg-brand-line md:block"></div>
         <div
           class="absolute left-0 top-[18px] hidden h-[2px] w-full origin-left bg-primary transition-transform duration-1000 ease-out md:block"
           :style="{ transform: isWeekLineVisible ? 'scaleX(1)' : 'scaleX(0)' }"
@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
               class="group rounded-[16px] border bg-white p-[22px] transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-[26px]"
               :class="[
                 visibleWeekCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0',
-                activeWeekStep === index ? 'border-primary md:border-[#E6E1D8]' : 'border-[#E6E1D8]',
+                activeWeekStep === index ? 'border-primary md:border-brand-line' : 'border-brand-line',
               ]"
               :style="{ transitionDelay: `${index * 90}ms` }"
             >
@@ -203,7 +203,7 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="mt-12 md:mt-16">
-        <figure class="mx-auto w-full max-w-[500px] overflow-hidden rounded-[14px] border border-[#E6E1D8] md:rounded-[16px]">
+        <figure class="mx-auto w-full max-w-[500px] overflow-hidden rounded-[14px] border border-brand-line md:rounded-[16px]">
           <img
             src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=1200&q=80"
             alt="Доставка NutriMe: коробка с готовыми блюдами"

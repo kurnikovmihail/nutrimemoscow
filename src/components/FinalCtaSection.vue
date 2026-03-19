@@ -99,7 +99,7 @@ onBeforeUnmount(() => {
 
       <button
         type="button"
-        class="final-cta-pulse mt-9 w-full rounded-[12px] bg-white px-6 py-4 text-[17px] font-semibold text-primary transition hover:bg-[#F3E2DC] active:scale-[0.98] md:w-auto md:px-9 md:py-[18px] md:text-[18px]"
+        class="final-cta-pulse mt-9 w-full rounded-[12px] bg-white px-6 py-4 text-[17px] font-semibold text-primary transition hover:bg-primary/10 active:scale-[0.98] md:w-auto md:px-9 md:py-[18px] md:text-[18px]"
         @click="openQuiz"
       >
         Получить персональный расчёт

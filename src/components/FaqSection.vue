@@ -112,7 +112,7 @@ onBeforeUnmount(() => {
           class="rounded-[14px] border bg-white px-5 py-[18px] transition-all duration-500 md:px-6 md:py-5"
           :class="[
             visibleFaqCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0',
-            activeFaqIndex === index ? 'border-primary' : 'border-[#E6E1D8] hover:border-primary',
+            activeFaqIndex === index ? 'border-primary' : 'border-brand-line hover:border-primary',
           ]"
           :style="{ transitionDelay: `${index * 70}ms` }"
         >
@@ -162,7 +162,7 @@ onBeforeUnmount(() => {
       <div class="mt-8 text-center">
         <button
           type="button"
-          class="text-sm font-semibold text-primary underline decoration-primary/40 decoration-2 underline-offset-4 transition hover:text-[#C25E40]"
+          class="text-sm font-semibold text-primary underline decoration-primary/40 decoration-2 underline-offset-4 transition hover:text-primary-hover"
           @click="toggleFaqSupportForm"
         >
           Не нашли ответ? Напишите нам
@@ -172,7 +172,7 @@ onBeforeUnmount(() => {
       <transition name="accordion">
         <article
           v-if="isFaqSupportOpen"
-          class="mt-5 rounded-[14px] border border-[#E6E1D8] bg-white p-5 md:p-6"
+          class="mt-5 rounded-[14px] border border-brand-line bg-white p-5 md:p-6"
         >
           <div v-if="!faqSupportSubmitted">
             <p class="text-base font-semibold text-brand-text">Форма вопроса</p>
@@ -201,7 +201,7 @@ onBeforeUnmount(() => {
 
             <button
               type="button"
-              class="mt-4 rounded-[10px] bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35]"
+              class="mt-4 rounded-[10px] bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-hover active:bg-secondary"
               @click="submitFaqSupport"
             >
               Отправить вопрос

@@ -142,9 +142,9 @@ onBeforeUnmount(() => {
       </header>
 
       <div class="relative mt-12 md:mt-16">
-        <div class="absolute bottom-0 left-[17px] top-0 w-[2px] bg-[#E6E1D8] md:hidden"></div>
+        <div class="absolute bottom-0 left-[17px] top-0 w-[2px] bg-brand-line md:hidden"></div>
 
-        <div class="absolute left-0 right-0 top-[18px] hidden h-[2px] bg-[#E6E1D8] md:block"></div>
+        <div class="absolute left-0 right-0 top-[18px] hidden h-[2px] bg-brand-line md:block"></div>
         <div
           class="absolute left-0 top-[18px] hidden h-[2px] w-full origin-left bg-primary transition-transform duration-1000 ease-out md:block"
           :style="{ transform: isProcessLineVisible ? 'scaleX(1)' : 'scaleX(0)' }"
@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
               class="group rounded-[14px] border bg-white p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-soft md:p-7"
               :class="[
                 visibleProcessSteps.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-[30px] opacity-0',
-                activeProcessStep === index ? 'border-primary md:border-[#E6E1D8]' : 'border-[#E6E1D8]',
+                activeProcessStep === index ? 'border-primary md:border-brand-line' : 'border-brand-line',
               ]"
               :style="{ transitionDelay: `${index * 80}ms` }"
             >
@@ -207,7 +207,7 @@ onBeforeUnmount(() => {
         </p>
         <a
           href="#menu"
-          class="mt-7 inline-flex rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-[#C25E40] active:bg-[#A94F35]"
+          class="mt-7 inline-flex rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:scale-[1.03] hover:bg-primary-hover active:bg-secondary"
         >
           Посмотреть примеры меню
         </a>

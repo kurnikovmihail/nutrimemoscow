@@ -311,7 +311,7 @@ onBeforeUnmount(() => {
           </p>
           <button
             type="button"
-            class="mt-5 w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35]"
+            class="mt-5 w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary-hover active:bg-secondary"
             @click="closeQuiz"
           >
             Закрыть
@@ -356,7 +356,7 @@ onBeforeUnmount(() => {
 
             <button
               type="button"
-              class="w-full rounded-xl bg-primary px-6 py-4 text-base font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35]"
+              class="w-full rounded-xl bg-primary px-6 py-4 text-base font-semibold text-white transition hover:bg-primary-hover active:bg-secondary"
               @click="nextStep"
             >
               Начать расчет
@@ -371,7 +371,7 @@ onBeforeUnmount(() => {
                 :key="option.value"
                 type="button"
                 class="w-full rounded-xl border bg-white px-4 py-4 text-left transition"
-                :class="form.goal === option.value ? 'border-primary shadow-soft' : 'border-[#E6E1D8] hover:border-primary/60'"
+                :class="form.goal === option.value ? 'border-primary shadow-soft' : 'border-brand-line hover:border-primary/60'"
                 @click="selectGoal(option.value)"
               >
                 <span class="inline-flex h-8 w-8 items-center justify-center text-secondary">
@@ -405,7 +405,7 @@ onBeforeUnmount(() => {
                 :key="option"
                 type="button"
                 class="w-full rounded-xl border bg-white px-4 py-4 text-left text-base font-semibold transition"
-                :class="form.gender === option ? 'border-primary shadow-soft' : 'border-[#E6E1D8] hover:border-primary/60'"
+                :class="form.gender === option ? 'border-primary shadow-soft' : 'border-brand-line hover:border-primary/60'"
                 @click="form.gender = option"
               >
                 {{ option }}
@@ -478,7 +478,7 @@ onBeforeUnmount(() => {
                 :key="option.value"
                 type="button"
                 class="w-full rounded-xl border bg-white px-4 py-4 text-left transition"
-                :class="form.activity === option.value ? 'border-primary shadow-soft' : 'border-[#E6E1D8] hover:border-primary/60'"
+                :class="form.activity === option.value ? 'border-primary shadow-soft' : 'border-brand-line hover:border-primary/60'"
                 @click="form.activity = option.value"
               >
                 <span class="inline-flex h-7 w-7 items-center justify-center text-secondary">
@@ -513,7 +513,7 @@ onBeforeUnmount(() => {
                 :key="option"
                 type="button"
                 class="w-full rounded-xl border bg-white px-4 py-4 text-left text-sm font-semibold transition"
-                :class="form.restrictions.includes(option) ? 'border-primary shadow-soft' : 'border-[#E6E1D8] hover:border-primary/60'"
+                :class="form.restrictions.includes(option) ? 'border-primary shadow-soft' : 'border-brand-line hover:border-primary/60'"
                 @click="selectRestriction(option)"
               >
                 {{ option }}
@@ -535,19 +535,19 @@ onBeforeUnmount(() => {
             <h3 class="text-[28px] font-bold leading-[1.15] text-brand-text">Ваш персональный рацион</h3>
 
             <div class="mt-5 grid grid-cols-2 gap-3">
-              <article class="rounded-xl border border-[#E6E1D8] bg-white p-3">
+              <article class="rounded-xl border border-brand-line bg-white p-3">
                 <p class="text-xs text-brand-muted">Калории</p>
                 <p class="mt-1 text-lg font-bold text-brand-text">{{ caloriePlan.calories }} kcal</p>
               </article>
-              <article class="rounded-xl border border-[#E6E1D8] bg-white p-3">
+              <article class="rounded-xl border border-brand-line bg-white p-3">
                 <p class="text-xs text-brand-muted">Белки</p>
                 <p class="mt-1 text-lg font-bold text-brand-text">{{ caloriePlan.protein }} г</p>
               </article>
-              <article class="rounded-xl border border-[#E6E1D8] bg-white p-3">
+              <article class="rounded-xl border border-brand-line bg-white p-3">
                 <p class="text-xs text-brand-muted">Жиры</p>
                 <p class="mt-1 text-lg font-bold text-brand-text">{{ caloriePlan.fat }} г</p>
               </article>
-              <article class="rounded-xl border border-[#E6E1D8] bg-white p-3">
+              <article class="rounded-xl border border-brand-line bg-white p-3">
                 <p class="text-xs text-brand-muted">Углеводы</p>
                 <p class="mt-1 text-lg font-bold text-brand-text">{{ caloriePlan.carbs }} г</p>
               </article>
@@ -574,7 +574,7 @@ onBeforeUnmount(() => {
               />
             </div>
 
-            <div class="mt-5 space-y-1.5 rounded-xl border border-[#E6E1D8] bg-white p-3">
+            <div class="mt-5 space-y-1.5 rounded-xl border border-brand-line bg-white p-3">
               <p class="text-xs text-brand-muted">Более 2000 клиентов уже используют NutriMe</p>
               <p class="text-xs font-semibold text-primary">Сегодня осталось {{ placesLeft }} мест на консультацию</p>
               <p class="text-xs text-brand-muted">Заполнение занимает 1 минуту</p>
@@ -582,7 +582,7 @@ onBeforeUnmount(() => {
 
             <button
               type="button"
-              class="mt-5 w-full rounded-xl bg-primary px-6 py-4 text-base font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35] disabled:cursor-not-allowed disabled:opacity-40"
+              class="mt-5 w-full rounded-xl bg-primary px-6 py-4 text-base font-semibold text-white transition hover:bg-primary-hover active:bg-secondary disabled:cursor-not-allowed disabled:opacity-40"
               :disabled="!canContinue"
               @click="nextStep"
             >
@@ -604,7 +604,7 @@ onBeforeUnmount(() => {
             </button>
             <button
               type="button"
-              class="w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35] disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
+              class="w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary-hover active:bg-secondary disabled:cursor-not-allowed disabled:opacity-40 sm:w-auto"
               :disabled="!canContinue"
               @click="nextStep"
             >

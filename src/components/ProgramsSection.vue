@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
           class="group rounded-[18px] border bg-white p-[26px] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-soft md:p-8"
           :class="[
             visibleProgramCards.includes(index) ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0',
-            props.activeProgramId === program.id ? 'border-primary' : 'border-[#E6E1D8]',
+            props.activeProgramId === program.id ? 'border-primary' : 'border-brand-line',
           ]"
           :style="{ transitionDelay: `${index * 80}ms` }"
         >
@@ -151,7 +151,7 @@ onBeforeUnmount(() => {
 
           <button
             type="button"
-            class="mt-6 w-full rounded-[10px] border border-primary px-4 py-[14px] text-sm font-semibold text-primary transition hover:bg-[#F3E2DC] md:w-auto md:px-5"
+            class="mt-6 w-full rounded-[10px] border border-primary px-4 py-[14px] text-sm font-semibold text-primary transition hover:bg-primary/10 md:w-auto md:px-5"
             @click="chooseProgram(program.id)"
           >
             Выбрать программу

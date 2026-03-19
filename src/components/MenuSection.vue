@@ -122,7 +122,7 @@ const closeDishModal = () => {
           :class="
             activeMenuFilter === filter.id
               ? 'border-transparent bg-primary text-white'
-              : 'border-[#E6E1D8] bg-white text-brand-text hover:bg-[#F3E2DC]'
+              : 'border-brand-line bg-white text-brand-text hover:bg-primary/10'
           "
           @click="setMenuFilter(filter.id)"
         >
@@ -138,7 +138,7 @@ const closeDishModal = () => {
         <article
           v-for="dish in filteredMenuDishes"
           :key="`${activeMenuFilter}-${dish.name}`"
-          class="group cursor-pointer overflow-hidden rounded-[14px] border border-[#E6E1D8] bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft md:rounded-[16px]"
+          class="group cursor-pointer overflow-hidden rounded-[14px] border border-brand-line bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-soft md:rounded-[16px]"
           @click="openDishModal(dish)"
         >
           <div class="overflow-hidden">
@@ -177,7 +177,7 @@ const closeDishModal = () => {
         <p class="text-base font-medium text-brand-text md:text-[18px]">Каждую неделю меню обновляется.</p>
         <a
           href="#menu"
-          class="mt-6 inline-flex rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-[#C25E40] active:bg-[#A94F35]"
+          class="mt-6 inline-flex rounded-[10px] bg-primary px-7 py-4 text-base font-semibold text-white transition hover:bg-primary-hover active:bg-secondary"
         >
           Посмотреть все блюда
         </a>
@@ -191,7 +191,7 @@ const closeDishModal = () => {
       class="fixed inset-0 z-[45] flex items-end bg-black/55 p-0 sm:items-center sm:justify-center sm:p-4"
       @click.self="closeDishModal"
     >
-      <div class="w-full rounded-t-3xl border border-[#E6E1D8] bg-white p-4 shadow-soft sm:max-w-4xl sm:rounded-2xl sm:p-5">
+      <div class="w-full rounded-t-3xl border border-brand-line bg-white p-4 shadow-soft sm:max-w-4xl sm:rounded-2xl sm:p-5">
         <div class="mb-3 flex items-center justify-between">
           <p class="text-sm font-semibold uppercase tracking-[0.14em] text-secondary">Блюдо из меню NutriMe</p>
           <button
@@ -205,7 +205,7 @@ const closeDishModal = () => {
         </div>
 
         <div class="grid gap-4 sm:gap-5 md:grid-cols-[1fr_0.9fr]">
-          <div class="overflow-hidden rounded-xl border border-[#E6E1D8]">
+          <div class="overflow-hidden rounded-xl border border-brand-line">
             <img :src="activeDish.image" :alt="activeDish.name" class="aspect-[4/3] w-full object-cover" />
           </div>
           <div>
